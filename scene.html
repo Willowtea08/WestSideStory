@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Scene Analysis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .video-text-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        margin-bottom: 2rem;
+      }
+
+      .video {
+        flex: 1;
+        margin-right: 20px;
+      }
+
+      .text {
+        flex: 1;
+      }
+
+      @media (max-width: 768px) {
+        .video-text-container {
+          flex-direction: column;
+        }
+
+        .video {
+          margin-right: 0;
+          margin-bottom: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1><a href="index.html">Social Class in "West Side Story"</a></h1>
+      </header>
+
+      <nav>
+        <a href="intro.html">Introduction to Musical</a>
+        <a href="define.html">Defining Social Class</a>
+        <a href="scene.html">Scene Analysis</a>
+      </nav>
+
+      <article>
+        <h2>Scene Analysis</h2>
+        <div class="video-text-container">
+          <div class="video">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/_e2igZexpMs"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="text">
+            <p>
+              The first song/scene that I will be analyzing is the musical
+              number "America" which was between the females and the male
+              members of the Sharks gang. The females argue that life is free in
+              America as compared to back home in Puerto Rico while the men
+              argue that it is not free and wonderful unless you are white. One
+              of the lyrics is “Buying on credit is so nice, One look at us and
+              they charge twice”(“America”) which sheds light on the racism they
+              faced simply because their skin color is not the typical light
+              skin tone found in America.
+              <br />
+              <br />
+              In this musical number, the characters sing with more emphasis on
+              their Puerto Rican accent with flashy dance moves and a Hispanic
+              musical style with guitar and Latin percussion. The females also
+              argue about how coming to America gave them freedom and how there
+              are more opportunities here while the men argue against them
+              bringing up the racism they as Puerto Ricans face along with other
+              negative things such as being considered as criminals and coming
+              from a war-torn and poverty-driven place.
+            </p>
+          </div>
+        </div>
+
+        <div class="video-text-container">
+          <div class="video">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/j7TT4jnnWys"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="text">
+            <p>
+              Another look into social class through the white lens is found in
+              the musical act "Gee, Officer Krumpe." All the members are wearing
+              blue colored or brown plaid design suits whereas Riff and Ice are
+              the only ones wearing yellow, possibly showing their position in
+              the gang as the leader and the head of the gang. “Gee, Officer
+              Krupke” lyrics are about how the Jets gang feels about the police
+              officers and adult officials in their life and what caused them to
+              form a gang.
+
+              <br />
+              <br />
+              They reenact the song as a scene of being in a courtroom, acting
+              as judges, police officers, and themselves as unwanted juvenile
+              delinquents whose parents are drunk and always on drugs thus they
+              never received affection or guidance in life. As the lyrics go
+              “Our mothers all are junkies, Our fathers all are drunks. Golly
+              Moses, naturally we're punks!”(“Gee, Officer Krupke”) indicating
+              that they lived in a poor environment with no parental love from
+              their parents and decided to get away from the bad influence and
+              try to find a better way of living by joining the gang but were
+              still labeled as socially sick or psychologically disturbed.
+            </p>
+          </div>
+        </div>
+      </article>
+      <script>
+        function updateContent() {
+          var today = new Date();
+          var dayOfWeek = today.getDay();
+          var colors = [
+            "lightcoral",
+            "lightblue",
+            "lightgreen",
+            "lightpink",
+            "lightyellow",
+            "lightsalmon",
+            "lightseagreen",
+          ];
+          document.body.style.backgroundColor = colors[dayOfWeek] || "white";
+        }
+        function applyAnimation() {
+          gsap.from("main img, article", {
+            opacity: 0,
+            duration: 2,
+            scale: 0.9,
+          });
+        }
+        window.onload = function () {
+          updateContent();
+          applyAnimation();
+        };
+      </script>
+    </div>
+  </body>
+</html>

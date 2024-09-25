@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Defining Social Class</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1><a href="index.html">Social Class in "West Side Story"</a></h1>
+      </header>
+
+      <nav>
+        <a href="intro.html">Introduction to Musical</a>
+        <a href="define.html">Defining Social Class</a>
+        <a href="scene.html">Scene Analysis</a>
+      </nav>
+
+      <main>
+        <img
+          class="photo"
+          src="bts.jpg"
+          alt="Defining Social Class"
+          width="375"
+          height="250"
+        />
+
+        <article>
+          <h2>Defining Social Class</h2>
+          <p>
+            Race is still a big factor in today’s society and it is displayed in
+            the film industry in the United States. Social class or social
+            division is often defined as the different status of wealth an
+            individual has in life. The richer and more luxurious the lifestyle
+            the higher you are in society.
+            <br />
+            <br />
+            However, instead of displaying the lifestyle of the wealthy and
+            upper-class Americans, West Side Story (1961) focuses on the lower
+            class members of society such as those who are immigrants like the
+            Sharks gang which consist of all Puerto Rican members who immigrated
+            to America and those who come from a corrupted household which is
+            the Jets gang consisting of all White American members. Although
+            many people argue that race does not determine our status in
+            America, the film reveals the unfair conduct of immigrants from two
+            different perspectives. West Side Story (1961) outlines the racial
+            treatments immigrants face in America, particularly people of color,
+            which leads to a lack of opportunities for them, and as a result, a
+            social class is created.
+            <br />
+            <br />
+          </p>
+        </article>
+      </main>
+      <script>
+        function updateContent() {
+          var today = new Date();
+          var dayOfWeek = today.getDay();
+          var colors = [
+            "lightcoral",
+            "lightblue",
+            "lightgreen",
+            "lightpink",
+            "lightyellow",
+            "lightsalmon",
+            "lightseagreen",
+          ];
+          document.body.style.backgroundColor = colors[dayOfWeek] || "white";
+        }
+        function applyAnimation() {
+          gsap.from("main img, article", { opacity: 0, duration: 2, y: 50 });
+        }
+        window.onload = function () {
+          updateContent();
+          applyAnimation();
+        };
+      </script>
+    </div>
+  </body>
+</html>

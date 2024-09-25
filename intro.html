@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Introduction to Musical</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1><a href="index.html"> Social Class in "West Side Story"</a></h1>
+      </header>
+
+      <nav>
+        <a href="intro.html">Introduction to Musical</a>
+        <a href="define.html">Defining Social Class</a>
+        <a href="scene.html">Scene Analysis</a>
+      </nav>
+
+      <main>
+        <img
+          class="photoone"
+          src=WestSideStory/poster.jpg
+        />
+
+        <article>
+          <br />
+          <h2>Introduction to Musical</h2>
+          <p>
+            "West Side Story" the iconic 1961 musical, is a timeless masterpiece
+            that transcends generations. Directed by Jerome Robbins and Robert
+            Wise, this cinematic adaptation of the Broadway hit by Leonard
+            Bernstein, Stephen Sondheim, and Arthur Laurents brings to life the
+            gripping tale of love and conflict on the mean streets of New York
+            City. Set against a backdrop of rivalry between two youth gangs, the
+            Jets and the Sharks, this unforgettable story explores themes of
+            prejudice, identity, and the transformative power of love. With its
+            memorable music, incredible choreography, and stellar performances,
+            "West Side Story" has remained a cultural touchstone for over six
+            decades, leaving an indelible mark on the world of musical theater
+            and cinema.
+          </p>
+        </article>
+      </main>
+      <script>
+        function updateContent() {
+          var today = new Date();
+          var dayOfWeek = today.getDay();
+          var colors = [
+            "lightcoral",
+            "lightblue",
+            "lightgreen",
+            "lightpink",
+            "lightyellow",
+            "lightsalmon",
+            "lightseagreen",
+          ];
+          document.body.style.backgroundColor = colors[dayOfWeek] || "white";
+        }
+
+        function applyAnimation() {
+          gsap.from("main img, article", { opacity: 0, duration: 2, x: -50 });
+        }
+
+        window.onload = function () {
+          updateContent();
+          applyAnimation();
+        };
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+body {
+    background-color: #F2EBBF;
+    font-family: Pacifico, cursive;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2, footer {
+    font-size: 30px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    padding: 20px;
+}
+
+#container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: 1fr;
+}
+
+header {
+    text-align: center;
+    background-color: #945D57;
+    color: white;
+    padding: 1em;
+}
+
+#menu {
+    background-color: #945D57;
+    color: white;
+    padding: 3em;
+    text-align: center;
+    font-size: 25px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #C75A4E;
+    padding: 1em;
+}
+
+nav a {
+    color: white;
+    padding: 1em;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+.photo {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.photoone {
+    width: 90%;
+    height: 70%;
+    margin-top: 20px;
+}
+
+.box {
+    flex: 1 0 300px;
+    margin: 10px;
+    max-width: 450px;
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+footer {
+    background-color: #FA442F;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .box {
+        flex: 1 0 100%;
+    }
+}
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: brown;
+}
+
+a:active {
+    color: red;
+}
+
+@keyframes bounce {
+0%, 100% {
+transform: translateY(0);
+}
+50% {
+transform: translateY(-20px);
+}
+}
+
+.box img:hover {
+animation: bounce 0.5s ease-in-out;
+}
+
+.fade-in {
+opacity: 0;
+}
+
+.fade-in-active {
+opacity: 1;
+transition: opacity 1s ease-in-out;
+}
+
+@media screen and (max-width: 600px) {
+main {
+grid-template-columns: 1fr;
+}
+.box {
+flex: 1 0 100%;
+}
+}
+
+
+

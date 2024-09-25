@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Class in "West Side Story"</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <style>
+      body {
+        background-color: #ede2d5;
+        font-family: Pacifico, cursive;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        font-size: 50px;
+      }
+
+      h2,
+      footer {
+        font-size: 30px;
+      }
+
+      p {
+        font-size: 20px;
+      }
+
+      .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 20px;
+      }
+
+      .box {
+        flex: 1 0 300px;
+        margin: 10px;
+        max-width: 450px;
+      }
+
+      .box img {
+        width: 100%;
+        height: auto;
+      }
+
+      #container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        text-align: center;
+        background-color: #945d57;
+        color: white;
+        padding: 1em;
+      }
+
+      #menu {
+        background-color: #945d57;
+        color: white;
+        padding: 3em;
+        text-align: center;
+        font-size: 25px;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        background-color: #c75a4e;
+        padding: 1em;
+      }
+
+      nav a {
+        color: white;
+        padding: 1em;
+        text-decoration: none;
+        font-size: 25px;
+      }
+
+      main {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        gap: 20px;
+      }
+
+      .photo {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+
+      .photoone {
+        width: 90%;
+        height: 70%;
+        margin-top: 20px;
+      }
+
+      .box {
+        flex: 1 0 300px;
+        margin: 10px;
+        max-width: 450px;
+      }
+
+      .box img {
+        width: 100%;
+        height: auto;
+      }
+
+      button {
+        display: flex;
+        justify-content: center;
+        background-color: white;
+      }
+
+      @media screen and (max-width: 600px) {
+        main {
+          grid-template-columns: 1fr;
+        }
+
+        .box {
+          flex: 1 0 100%;
+        }
+      }
+      a:link {
+        color: blue;
+      }
+
+      a:visited {
+        color: white;
+      }
+
+      a:hover {
+        color: brown;
+      }
+
+      a:active {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <div id="changeColorDiv">
+          <h1>Social Class in West Side Story</h1>
+        </div>
+      </header>
+
+      <nav>
+        <a href="intro.html">Introduction to Musical</a>
+        <a href="define.html">Defining Social Class</a>
+        <a href="scene.html">Scene Analysis</a>
+      </nav>
+
+      <div class="wrapper">
+        <div class="box">
+          <a href="intro.html">
+            <img
+              src="intro.jpg"
+              alt="Image 1"
+              class="fade-in"
+            />
+          </a>
+        </div>
+        <div class="box">
+          <a href="define.html">
+            <img
+              src="sharks.jpg"
+              alt="Image 2"
+              class="fade-in"
+            />
+          </a>
+        </div>
+        <div class="box">
+          <a href="scene.html">
+            <img
+              src="define.jpg"
+              alt="Image 3"
+              class="fade-in"
+            />
+          </a>
+        </div>
+      </div>
+
+      <button id="changeColorBtn" onclick="changeColor()">Change Color</button>
+    </div>
+
+    <audio id="clickSound" src="click-sound.mp3"></audio>
+    <audio id="hoverSound" src="hover-sound.mp3"></audio>
+
+    <script>
+      function changeColor() {
+        gsap.to("#changeColorDiv", {
+          backgroundColor: getRandomColor(),
+          duration: 1,
+        });
+      }
+
+      function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+
+      document.querySelectorAll(".box img").forEach(function (img) {
+        img.addEventListener("mouseover", function () {
+          document.getElementById("hoverSound").play();
+        });
+      });
+    </script>
+  </body>
+</html>
